@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace NUtilities.WebHttpClient
+namespace NUtilities.Web
 {
   public interface IWebHttpClient
   {

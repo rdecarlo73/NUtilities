@@ -7,12 +7,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUtilities.Silverlight", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUtilities.Moonlight", "Moonlight\NUtilities.Moonlight.csproj", "{B0115D3D-7B01-4EC9-BFA7-F7F2D0CBCBFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUtilities.Test", "Tests\NUtilities.Test.csproj", "{5C67BBF6-790C-4B5D-A9E9-3E8898BA5180}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C67BBF6-790C-4B5D-A9E9-3E8898BA5180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C67BBF6-790C-4B5D-A9E9-3E8898BA5180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C67BBF6-790C-4B5D-A9E9-3E8898BA5180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C67BBF6-790C-4B5D-A9E9-3E8898BA5180}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B0115D3D-7B01-4EC9-BFA7-F7F2D0CBCBFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B0115D3D-7B01-4EC9-BFA7-F7F2D0CBCBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0115D3D-7B01-4EC9-BFA7-F7F2D0CBCBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -8,7 +8,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using NUtilities.Serialization;
 
-namespace NUtilities.WebHttpClient
+namespace NUtilities.Web
 {
     public class MultiPartMessage
     {
@@ -186,9 +186,9 @@ namespace NUtilities.WebHttpClient
                 request.Timeout = TIMEOUT;
 
                 // allows for validation of SSL conversations
-                ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(
-                  ValidateRemoteCertificate
-                );
+                //ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(
+                //  ValidateRemoteCertificate
+                //);
 
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
@@ -218,9 +218,9 @@ namespace NUtilities.WebHttpClient
                 request.Timeout = TIMEOUT;
 
                 // allows for validation of SSL conversations
-                ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(
-                  ValidateRemoteCertificate
-                );
+                //ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(
+                //  ValidateRemoteCertificate
+                //);
 
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
