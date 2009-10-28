@@ -34,16 +34,6 @@ namespace NUtilities.Serialization
       return Deserialize<T>(xml, true);
     }
 
-    public static T DeserializeXml<T>(this string xml)
-    {
-      return Deserialize<T>(xml, false);
-    }
-    
-    public static string SerializeXml<T>(T graph)
-    {
-      return Serialize<T>(graph, Encoding.UTF8, false);
-    }
-
     public static string SerializeDataContract<T>(T graph)
     {
       return Serialize<T>(graph, Encoding.UTF8);
@@ -52,11 +42,6 @@ namespace NUtilities.Serialization
     public static string Serialize<T>(T graph, Encoding encoding)
     {
       return Serialize<T>(graph, encoding, true);
-    }
-
-    public static string Serialize<T>(T graph, bool useDataContractSerializer)
-    {
-      return Serialize<T>(graph, Encoding.UTF8, useDataContractSerializer);
     }
 
     public static string Serialize<T>(T graph, Encoding encoding, bool useDataContractSerializer)
@@ -73,11 +58,7 @@ namespace NUtilities.Serialization
           DataContractSerializer serializer = new DataContractSerializer(typeof(T));
           serializer.WriteObject(writer, graph);
         }
-        else
-        {
-          XmlSerializer serializer = new XmlSerializer(typeof(T));
-          serializer.Serialize(writer, graph);
-        }
+				
         writer.Close();
 
         xml = builder.ToString();
@@ -120,11 +101,6 @@ namespace NUtilities.Serialization
           DataContractSerializer serializer = new DataContractSerializer(typeof(T));
           serializer.WriteObject(stream, graph);
         }
-        else
-        {
-          XmlSerializer serializer = new XmlSerializer(typeof(T));
-          serializer.Serialize(stream, graph);
-        }
         return stream;
       }
       catch (Exception exception)
@@ -135,9 +111,10 @@ namespace NUtilities.Serialization
 
     public static T Deserialize<T>(string xml, bool useDataContractSerializer)
     {
-      T graph;
+	  T graph = default(T);
+
       try
-      {
+      {		
         StringReader input = new StringReader(xml);
         XmlReaderSettings settings = new XmlReaderSettings();
         settings.DtdProcessing = DtdProcessing.Ignore;
@@ -148,11 +125,6 @@ namespace NUtilities.Serialization
           DataContractSerializer serializer = new DataContractSerializer(typeof(T));
 
           graph = (T)serializer.ReadObject(reader, false);
-        }
-        else
-        {
-          XmlSerializer serializer = new XmlSerializer(typeof(T));
-          graph = (T)serializer.Deserialize(reader);
         }
         return graph;
       }
@@ -169,7 +141,7 @@ namespace NUtilities.Serialization
 
     public static T DeserializeFromStream<T>(Stream stream, bool useDataContractSerializer)
     {
-      T graph;
+      T graph = default(T);
       XmlReader reader = null;
       try
       {
@@ -178,12 +150,7 @@ namespace NUtilities.Serialization
         {
           DataContractSerializer serializer = new DataContractSerializer(typeof(T));
           graph = (T)serializer.ReadObject(reader, true);
-        }
-        else
-        {
-          XmlSerializer serializer = new XmlSerializer(typeof(T));
-          graph = (T)serializer.Deserialize(reader);
-        }        
+        }       
         
         return graph;
       }
