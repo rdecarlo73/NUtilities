@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUtilities.Desktop", "Deskt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUtilities.Silverlight", "Silverlight\NUtilities.Silverlight.csproj", "{EA853599-4781-4BD2-8EC7-61E893520A23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUtilities.Moonlight", "NUtilities.Moonlight\NUtilities.Moonlight.csproj", "{B0115D3D-7B01-4EC9-BFA7-F7F2D0CBCBFA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUtilities.Moonlight", "Moonlight\NUtilities.Moonlight.csproj", "{B0115D3D-7B01-4EC9-BFA7-F7F2D0CBCBFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

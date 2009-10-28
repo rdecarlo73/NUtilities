@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
@@ -158,7 +158,7 @@ namespace NUtilities.WebHttpClient
         {
           if (Convert.ToBoolean(ConfigurationManager.AppSettings["IgnoreSslErrors"]))
           {
-            // allow any old dodgy certificate...
+            // allow any certificate...
             return true;
           }
           else
