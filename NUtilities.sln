@@ -1,13 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUtilities.Desktop", "Desktop\NUtilities.Desktop.csproj", "{E937EE2D-064B-4EDA-9E81-7E7F509A784A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUtilities.Silverlight", "Silverlight\NUtilities.Silverlight.csproj", "{EA853599-4781-4BD2-8EC7-61E893520A23}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUtilities.Moonlight", "Moonlight\NUtilities.Moonlight.csproj", "{B0115D3D-7B01-4EC9-BFA7-F7F2D0CBCBFA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUtilities.Test", "Tests\NUtilities.Test.csproj", "{5C67BBF6-790C-4B5D-A9E9-3E8898BA5180}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUtilities.Desktop", "NUtilities.Desktop.csproj", "{E937EE2D-064B-4EDA-9E81-7E7F509A784A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,27 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5C67BBF6-790C-4B5D-A9E9-3E8898BA5180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C67BBF6-790C-4B5D-A9E9-3E8898BA5180}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C67BBF6-790C-4B5D-A9E9-3E8898BA5180}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C67BBF6-790C-4B5D-A9E9-3E8898BA5180}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B0115D3D-7B01-4EC9-BFA7-F7F2D0CBCBFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B0115D3D-7B01-4EC9-BFA7-F7F2D0CBCBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B0115D3D-7B01-4EC9-BFA7-F7F2D0CBCBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B0115D3D-7B01-4EC9-BFA7-F7F2D0CBCBFA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E937EE2D-064B-4EDA-9E81-7E7F509A784A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E937EE2D-064B-4EDA-9E81-7E7F509A784A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E937EE2D-064B-4EDA-9E81-7E7F509A784A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E937EE2D-064B-4EDA-9E81-7E7F509A784A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EA853599-4781-4BD2-8EC7-61E893520A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA853599-4781-4BD2-8EC7-61E893520A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA853599-4781-4BD2-8EC7-61E893520A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA853599-4781-4BD2-8EC7-61E893520A23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Desktop\NUtilities.Desktop.csproj
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
+		StartupItem = NUtilities.Desktop.csproj
 	EndGlobalSection
 EndGlobal
