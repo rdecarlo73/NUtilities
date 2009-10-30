@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 
 [assembly: ComVisibleAttribute(false)]
 [assembly: CLSCompliantAttribute(true)]
-[assembly: AssemblyTitleAttribute("NAnt")]
+[assembly: AssemblyTitleAttribute("NUtilities")]
 [assembly: AssemblyDescriptionAttribute("A .NET Utility library")]
 [assembly: AssemblyConfigurationAttribute("dev")]
 [assembly: AssemblyCompanyAttribute("http://code.google.com/p/nutilities")]

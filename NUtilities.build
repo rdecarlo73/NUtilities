@@ -14,7 +14,7 @@
         <property name="project.version.full" value="${project.version + if(project.release.type == 'release', '', '-' + project.release.type)}" dynamic="true" />
     </if>
     <if test="${project.release.type == 'dev' or project.release.type == 'nightly'}">
-        <property name="build.warnaserror" value="true" />
+        <property name="build.warnaserror" value="false" />
     </if>
     <!--
         specifies whether the CommonAssemblyInfo.cs file should be created.
@@ -61,7 +61,7 @@
             <attributes>
                 <attribute type="ComVisibleAttribute" value="false" />
                 <attribute type="CLSCompliantAttribute" value="true" />
-                <attribute type="AssemblyTitleAttribute" value="NAnt" />
+                <attribute type="AssemblyTitleAttribute" value="NUtilities" />
                 <attribute type="AssemblyDescriptionAttribute" value="A .NET Utility library" />
                 <attribute type="AssemblyConfigurationAttribute" value="${project.release.type}" />
                 <attribute type="AssemblyCompanyAttribute" value="http://code.google.com/p/nutilities" />
