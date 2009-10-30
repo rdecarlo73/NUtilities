@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<project name="NUtilities" default="build">
+    <!--
+        Required properties:
+            * build.dir             - (path) root level to build to, assemblies will go in ${build.dir}/bin
+            * build.debug           - (true|false) debug build?
+            * build.warnaserror     - (true|false) treat warnings as errors
+            * current.build.defines - framework-specific build defines
+            * nutitlities.name      - assembly name for NUtilities
+    -->
+    <target name="build">
+        <!-- build NUtilities -->
+        <csc target="library" define="${current.build.defines}" warnaserror="${build.warnaserror}" debug="${build.debug}" output="${build.dir}/bin/${nutilities.name}.dll" doc="${build.dir}/bin/${nutilities.name}.xml">
+            <warnaserror>
+                <!-- do not consider deprecation warnings as errors on .NET 2.0 (and higher)-->
+                <exclude number="618" if="${framework::get-family(framework::get-target-framework())== 'net' and framework::get-version(framework::get-target-framework()) >= version::parse('2.0')}" />
+            </warnaserror>
+            <nowarn>
+                <!-- 
+                    (g)mcs currently does not support /warnaserror option that
+                    takes list of warnings not to treat as errors, so we have
+                    to use /nowarn instead
+                -->
+                <warning number="618" if="${framework::get-family(framework::get-target-framework())== 'mono' and framework::get-version(framework::get-target-framework()) >= version::parse('2.0')}" />
+                <warning number="612" if="${framework::get-family(framework::get-target-framework())== 'mono' and framework::get-version(framework::get-target-framework()) >= version::parse('2.0')}" />
+            </nowarn>
+            <sources failonempty="true">
+                <include name="**/*.cs" />
+                <!-- common assembly-level attributes -->
+                <include name="../CommonAssemblyInfo.cs" />
+            </sources>
+            <references>
+                <include name="System.dll" />
+                <include name="System.Core.dll" />
+                <include name="System.Configuration.dll" />
+                <include name="System.Runtime.Serialization.dll" />
+                <include name="System.Web.dll" />
+                <include name="System.Xml.dll" />
+            </references>
+            <resources>
+                <include name="*.resx"/>
+            </resources>
+        </csc>
+    </target>
+</project>
