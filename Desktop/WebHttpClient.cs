@@ -208,7 +208,6 @@ namespace NUtilities.Web
         {
             try
             {
-                string uri = _baseUri + GetUri(relativeUri);
 
                 WebRequest request = HttpWebRequest.Create(uri);
 
