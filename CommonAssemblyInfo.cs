@@ -16,7 +16,7 @@ using System.Runtime.InteropServices;
 [assembly: CLSCompliantAttribute(true)]
 [assembly: AssemblyTitleAttribute("NUtilities")]
 [assembly: AssemblyDescriptionAttribute("A .NET Utility library")]
-[assembly: AssemblyConfigurationAttribute("dev")]
+[assembly: AssemblyConfigurationAttribute("release")]
 [assembly: AssemblyCompanyAttribute("http://code.google.com/p/nutilities")]
 [assembly: AssemblyProductAttribute("NUtilities")]
 [assembly: AssemblyCopyrightAttribute("Copyright (C) 2009 Rob DeCarlo")]

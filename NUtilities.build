@@ -5,7 +5,7 @@
     <!-- global project settings -->
     <property name="project.name" value="nutilities" />
     <property name="project.version" value="0.1" unless="${property::exists('project.version')}" />
-    <property name="project.release.type" value="dev" unless="${property::exists('project.release.type')}" /> <!-- nightly / dev / alpha / beta# / rc# / release -->
+    <property name="project.release.type" value="release" unless="${property::exists('project.release.type')}" /> <!-- nightly / dev / alpha / beta# / rc# / release -->
     <property name="build.warnaserror" value="false" />
     <if test="${project.release.type == 'nightly'}">
         <property name="project.version.full" value="${project.version + '-nightly-' + build.date}" />
@@ -24,7 +24,7 @@
     <property name="create.assemblyinfo" value="true" />
 
     <!-- default configuration -->
-    <property name="project.config" value="debug" /> <!-- debug|release -->
+    <property name="project.config" value="release" /> <!-- debug|release -->
     <property name="nutilities.name" value="NUtilities" />
     <property name="build.defines" value="" />
     <property name="build.number" value="${math::abs(math::floor(timespan::get-total-days(datetime::now() - datetime::parse('11/01/2009'))))}" />
