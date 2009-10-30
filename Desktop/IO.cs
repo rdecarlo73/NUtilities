@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.Serialization;
@@ -160,8 +160,6 @@ namespace NUtilities.IO
 
     public static void WriteException(Exception exception, string path)
     {
-      string typeName = String.Empty;
-      
       StreamWriter streamWriter = new StreamWriter(path, true);
       streamWriter.WriteLine(System.DateTime.UtcNow + " (UTC) - " + exception.Source);
       streamWriter.WriteLine(exception.ToString());
