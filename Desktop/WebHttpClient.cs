@@ -206,9 +206,9 @@ namespace NUtilities.Web
 
         public string GetMessage(string relativeUri)
         {
+            string uri = _baseUri + relativeUri;  
             try
             {
-
                 WebRequest request = HttpWebRequest.Create(uri);
 
                 PrepareCredentials(request);
@@ -229,8 +229,6 @@ namespace NUtilities.Web
             }
             catch (Exception exception)
             {
-                string uri = _baseUri + relativeUri;
-
                 throw new Exception("Error while executing HTTP GET request on" + uri + ".", exception);
             }
         }

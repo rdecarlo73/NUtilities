@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUtilities", "Desktop\NUtil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUtilities.Silverlight", "Silverlight\NUtilities.Silverlight.csproj", "{EA853599-4781-4BD2-8EC7-61E893520A23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUtilities.Test", "Tests\NUtilities.Test.csproj", "{5E7E25E5-E858-4BE3-875F-C3B3FB5AA54B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{EA853599-4781-4BD2-8EC7-61E893520A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA853599-4781-4BD2-8EC7-61E893520A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA853599-4781-4BD2-8EC7-61E893520A23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E7E25E5-E858-4BE3-875F-C3B3FB5AA54B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E7E25E5-E858-4BE3-875F-C3B3FB5AA54B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E7E25E5-E858-4BE3-875F-C3B3FB5AA54B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E7E25E5-E858-4BE3-875F-C3B3FB5AA54B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
